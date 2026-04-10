@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Code2, Video, Coffee, Rocket } from 'lucide-react';
-import myPhoto from '../picture/foto.jpeg';
+import myPhoto from '../picture/foto1.jpg';
 
 export default function AboutSection() {
   const stats = [

@@ -42,19 +42,19 @@ export default function Navbar({ isDark, toggleTheme }) {
           ? isDark
             ? `backdrop-blur-xl 
                bg-gradient-to-r 
-               from-[#0f172a]/95 via-[#1e1b4b]/90 to-[#312e81]/90 
-               border-b border-indigo-400/20 
-               shadow-[0_4px_30px_rgba(99,102,241,0.3)]`
+               from-[#020617]/95 via-[#0f172a]/95 to-[#1e293b]/95 
+               border-b border-blue-500/20 
+               shadow-[0_4px_30px_rgba(0,0,0,0.6)]`
             : `backdrop-blur-xl 
                bg-gradient-to-r 
-               from-[#fff9c4]/95 via-[#fde68a]/95 to-[#fca5a5]/90 
-               border-b border-pink-300/40 
-               shadow-[0_4px_20px_rgba(255,180,120,0.4)]`
+               from-[#e2e8f0]/95 via-[#cbd5f5]/95 to-[#94a3b8]/95 
+               border-b border-slate-400/30 
+               shadow-[0_4px_20px_rgba(0,0,0,0.15)]`
           : isDark
           ? `bg-gradient-to-r 
-             from-[#0f172a]/80 via-[#1e1b4b]/70 to-[#312e81]/70`
+             from-[#020617]/80 via-[#0f172a]/70 to-[#1e293b]/70`
           : `bg-gradient-to-r 
-             from-[#fffde7]/80 via-[#fde68a]/80 to-[#fca5a5]/70`
+             from-[#f1f5f9]/80 via-[#e2e8f0]/80 to-[#cbd5f5]/70`
       }`}
     >
       <div className="container mx-auto px-4">
@@ -70,11 +70,11 @@ export default function Navbar({ isDark, toggleTheme }) {
             className={`text-xl md:text-2xl font-bold cursor-pointer ${
               isDark
                 ? 'bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-400 bg-clip-text text-transparent'
-                : 'bg-gradient-to-r from-orange-500 via-pink-500 to-rose-500 bg-clip-text text-transparent'
+                : 'bg-gradient-to-r from-blue-500 via-indigo-500 to-slate-500 bg-clip-text text-transparent'
             }`}
             whileHover={{ scale: 1.1 }}
           >
-            Noufal's Portfolio
+            Qathrun's Portfolio
           </motion.a>
 
           {/* DESKTOP */}
@@ -89,8 +89,8 @@ export default function Navbar({ isDark, toggleTheme }) {
                 }}
                 className={`relative font-medium transition-all ${
                   isDark
-                    ? 'text-indigo-100 hover:text-blue-300'
-                    : 'text-rose-800 hover:text-pink-600'
+                    ? 'text-slate-200 hover:text-blue-400'
+                    : 'text-slate-700 hover:text-blue-500'
                 }`}
                 whileHover={{ y: -2 }}
               >
@@ -98,7 +98,7 @@ export default function Navbar({ isDark, toggleTheme }) {
 
                 <span
                   className={`absolute left-0 -bottom-1 w-0 h-[2px] transition-all duration-300 group-hover:w-full ${
-                    isDark ? 'bg-indigo-400' : 'bg-pink-400'
+                    isDark ? 'bg-blue-400' : 'bg-blue-500'
                   }`}
                 ></span>
               </motion.a>
@@ -111,8 +111,8 @@ export default function Navbar({ isDark, toggleTheme }) {
               onClick={toggleTheme}
               className={`rounded-full ${
                 isDark
-                  ? 'text-indigo-200 hover:bg-indigo-400/20'
-                  : 'text-rose-700 hover:bg-pink-200/40'
+                  ? 'text-slate-200 hover:bg-blue-400/20'
+                  : 'text-slate-700 hover:bg-blue-200/40'
               }`}
             >
               <AnimatePresence mode="wait">
@@ -132,7 +132,7 @@ export default function Navbar({ isDark, toggleTheme }) {
                     animate={{ rotate: 0, opacity: 1 }}
                     exit={{ rotate: -90, opacity: 0 }}
                   >
-                    <Moon className="h-5 w-5 text-pink-500" />
+                    <Moon className="h-5 w-5 text-blue-500" />
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -145,7 +145,7 @@ export default function Navbar({ isDark, toggleTheme }) {
               {isDark ? (
                 <Sun className="h-5 w-5 text-yellow-300" />
               ) : (
-                <Moon className="h-5 w-5 text-pink-500" />
+                <Moon className="h-5 w-5 text-blue-500" />
               )}
             </Button>
 
@@ -153,7 +153,7 @@ export default function Navbar({ isDark, toggleTheme }) {
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={isDark ? 'text-white' : 'text-rose-800'}
+              className={isDark ? 'text-white' : 'text-slate-700'}
             >
               {isMobileMenuOpen ? <X /> : <Menu />}
             </Button>
@@ -170,8 +170,8 @@ export default function Navbar({ isDark, toggleTheme }) {
             exit={{ opacity: 0, height: 0 }}
             className={`md:hidden backdrop-blur-xl ${
               isDark
-                ? 'bg-gradient-to-b from-[#0f172a]/95 to-[#312e81]/90 border-t border-indigo-400/20'
-                : 'bg-gradient-to-b from-[#fff9c4]/95 to-[#fca5a5]/90 border-t border-pink-300/30'
+                ? 'bg-gradient-to-b from-[#020617]/95 to-[#1e293b]/90 border-t border-blue-500/20'
+                : 'bg-gradient-to-b from-[#e2e8f0]/95 to-[#94a3b8]/90 border-t border-slate-400/30'
             }`}
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
@@ -185,8 +185,8 @@ export default function Navbar({ isDark, toggleTheme }) {
                   }}
                   className={`transition ${
                     isDark
-                      ? 'text-indigo-100 hover:text-blue-300'
-                      : 'text-rose-800 hover:text-pink-600'
+                      ? 'text-slate-200 hover:text-blue-400'
+                      : 'text-slate-700 hover:text-blue-500'
                   }`}
                 >
                   {item.label}
